@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.taskplan">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TaskPlan"
+        tools:targetApi="31">
+        <activity
+            android:name=".Criar_tarefas"
+            android:exported="false" />
+        <activity
+            android:name=".Criar_Tarefas"
+            android:exported="false"
+            android:label="@string/title_activity_criar_tarefas"
+            android:theme="@style/Theme.TaskPlan.NoActionBar" />
+        <activity
+            android:name=".Tela_tarefas"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".criar_anotacoes"
+            android:exported="false" />
+        <activity
+            android:name=".Notacoes_principal"
+            android:exported="false" />
+        <activity
+            android:name=".Tela_das_anotacoes"
+            android:exported="false" />
+        <activity
+            android:name=".tela_anotacoes"
+            android:exported="false"
+            android:label="@string/title_activity_tela_anotacoes"
+            android:theme="@style/Theme.TaskPlan.NoActionBar" />
+        <activity
+            android:name=".tela_da_conta"
+            android:exported="false" />
+        <activity
+            android:name=".tela_conta"
+            android:exported="false"
+            android:label="@string/title_activity_tela_conta"
+            android:theme="@style/Theme.TaskPlan.NoActionBar" />
+        <activity
+            android:name=".Tela_Principal"
+            android:exported="false" />
+        <activity
+            android:name=".TelaSingIn"
+            android:exported="false" />
+        <activity
+            android:name=".TelaLogin"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
