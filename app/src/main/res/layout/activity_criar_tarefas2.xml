@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Criar_tarefas">
 
+    <EditText
+        android:id="@+id/etDataTaref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="16"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEmail7" />
+
     <TextView
         android:id="@+id/textoEmail6"
         android:layout_width="wrap_content"
@@ -20,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress7"
+        android:id="@+id/etNomeTaref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,110 +41,25 @@
 
     <TextView
         android:id="@+id/textoEmail9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="216dp"
-        android:text="Tipo da Tarefa"
+        android:text="Tipo: 1 para com prazo ,  2 para unitaria e 3 para ciclica"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="12dp"
-        android:tint="#EC1809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoEmail9"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="12dp"
-        android:tint="#4CAF50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoEmail9"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
-
-    <TextView
-        android:id="@+id/textoEmail11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
-        android:text="Com Prazo"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textoEmail12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
-        android:text="Recorrente"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="12dp"
-        android:tint="#FFEB3B"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoEmail9"
-        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
-
-    <TextView
-        android:id="@+id/textoEmail10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
-        android:text="Unitaria"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textoEmail8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="552dp"
-        android:text="Confirmar."
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button19"
-        android:layout_width="55dp"
+        android:layout_width="112dp"
         android:layout_height="49dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="540dp"
-        android:onClick="IrtelaTarefas"
-        android:text="ok"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="528dp"
+        android:onClick="mInserirTaref"
+        android:text="Cadastrar"
         android:textAllCaps="false"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,14 +96,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/etTipoTaref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:ems="16"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoEmail7" />
+        app:layout_constraintTop_toBottomOf="@+id/textoEmail9" />
 
     <TextView
         android:id="@+id/textoEmail7"
@@ -194,13 +119,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTime2"
+        android:id="@+id/etHoraTaref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="time"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoEmail14" />
 
     <TextView
@@ -215,47 +140,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="4dp"
-        android:text="14:30"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime2"
-        app:layout_constraintTop_toTopOf="@+id/editTextTime2" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoEmail14" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="492dp"
-        android:text="Deletar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.251"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="492dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
